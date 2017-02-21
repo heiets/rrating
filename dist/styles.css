@@ -158,13 +158,52 @@ body {
   border: none;
   font-size: 20px;
   padding-left: 20px;
+  box-shadow: 3px 4px 5px -4px rgba(0, 0, 0, 0.75);
+}
+
+.active {
+  background-color: #e8e8e8 !important;
+}
+
+.item {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #f1f1f1;
+  background-color: #fbf9f9;
+  display: flex;
+}
+
+.item:hover {
+  background-color: #f1f1f1;
+}
+
+.item__id {
+  width: 40px;
+  text-align: center;
+}
+
+.item__title {
+  width: 300px;
+  cursor: pointer;
+}
+
+.item__town {
+  width: 250px;
+}
+
+.item__likes {
+  width: 100px;
+}
+
+.item__price {
+  width: 100px;
 }
 
 .list {
   margin: 50px auto;
   max-width: 800px;
   background-color: #fff;
-  box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 4px 5px -4px rgba(0, 0, 0, 0.75);
 }
 
 .list ul {
@@ -177,44 +216,12 @@ body {
   flex-direction: column;
 }
 
-.list ul li:hover {
-  background-color: #f1f1f1;
-}
-
-.list ul li .item {
-  height: 30px;
-  line-height: 30px;
-  border-bottom: 1px solid #f1f1f1;
-  background-color: #fbf9f9;
-  display: flex;
-}
-
-.list ul li .item__id {
-  width: 40px;
-  text-align: center;
-}
-
-.list ul li .item__title {
-  width: 300px;
-  cursor: pointer;
-}
-
-.list ul li .item__town {
-  width: 250px;
-}
-
-.list ul li .item__likes {
-  width: 100px;
-}
-
-.list ul li .item__price {
-  width: 100px;
-}
-
 .list ul li .showDesc {
-  height: 100px;
-  min-height: 80px;
+  height: 150px;
+  min-height: 150px;
   transition: height 1s;
+  padding-top: 10px;
+  box-sizing: border-box;
 }
 
 .list ul li .desc {
@@ -222,6 +229,7 @@ body {
   overflow: hidden;
   height: 0;
   transition: height 1s;
+  box-shadow: inset 0px 0px 11px -6px rgba(0, 0, 0, 0.75);
 }
 
 .list ul li .desc .description {

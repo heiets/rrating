@@ -13,6 +13,7 @@ export default class Page extends Component {
     //}
     showDesc(e) {
         e.target.parentNode.parentNode.querySelector('.desc').classList.toggle('showDesc');
+        e.target.parentNode.parentNode.querySelector('.item').classList.toggle('active');
     }
     render() {
         //const { cards, i } = this.props;
@@ -31,6 +32,13 @@ export default class Page extends Component {
             </li>
         ));
         return <div className="list">
+            <div className="item active">
+                <div className="item__id">№</div>
+                <div className="item__title">Title</div>
+                <div className="item__town">Town</div>
+                <div className="item__likes">Likes</div>
+                <div className="item__price">Price</div>
+            </div>
             <ul>
                 { listToShow }
             </ul>

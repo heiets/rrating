@@ -70,56 +70,64 @@ body {
     border: none;
     font-size: 20px;
     padding-left: 20px;
+    box-shadow: 3px 4px 5px -4px rgba(0, 0, 0, 0.75);
+  }
+}
+
+.active {
+  background-color: #e8e8e8 !important;
+}
+.item {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #f1f1f1;
+  background-color: #fbf9f9;
+  display: flex;
+  &:hover {
+    background-color: #f1f1f1;
+  }
+  &__id {
+    width: 40px;
+    text-align: center;
+  }
+  &__title {
+    width: 300px;
+    cursor: pointer;
+  }
+  &__town {
+    width: 250px;
+  }
+  &__likes {
+    width: 100px;
+  }
+  &__price {
+    width: 100px;
   }
 }
 .list {
   margin: 50px auto;
   max-width: 800px;
   background-color: #fff;
-  box-shadow: 5px 5px 5px -2px rgba(0,0,0,0.75);
+  box-shadow: 3px 4px 5px -4px rgba(0, 0, 0, 0.75);
   ul {
     display: flex;
     flex-direction: column;
     li {
       display: flex;
       flex-direction: column;
-      &:hover {
-        background-color: #f1f1f1;
-      }
-      .item {
-        height: 30px;
-        line-height: 30px;
-        border-bottom: 1px solid #f1f1f1;
-        background-color: #fbf9f9;
-        display: flex;
-        &__id {
-          width: 40px;
-          text-align: center;
-        }
-        &__title {
-          width: 300px;
-          cursor: pointer;
-        }
-        &__town {
-          width: 250px;
-        }
-        &__likes {
-          width: 100px;
-        }
-        &__price {
-          width: 100px;
-        }
-      }
       .showDesc {
-        height: 100px;
-        min-height: 80px;
+        height: 150px;
+        min-height: 150px;
         transition: height 1s;
+        padding-top: 10px;
+        box-sizing: border-box;
       }
       .desc {
         display: flex;
         overflow: hidden;
         height: 0;
         transition: height 1s;
+        box-shadow: inset 0px 0px 11px -6px rgba(0, 0, 0, 0.75);
         .description {
           width: 450px;
           padding-left: 15px;
