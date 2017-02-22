@@ -607,10 +607,6 @@ const initialState = {
 
 export default function list(state = initialState, action) {
   switch (action.type) {
-    case 'NEXT_CARD':
-      return { ...state, i: action.number, progressNumber: action.progressNumber }
-    case 'PREV_CARD':
-      return { ...state, i: action.number }
     case 'SEARCH':
       return { ...state, filteredResult: action.result }
     default:

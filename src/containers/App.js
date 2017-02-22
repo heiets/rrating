@@ -12,14 +12,10 @@ class App extends Component {
       searchValue: ''
     };
   }
-  //toggleHistory() {
-  //  this.state.showHistory === false ? this.setState({showHistory: true}) : this.setState({showHistory: false});
-  //}
   setSearchValue(value) {
     this.setState({ searchValue: value });
   }
   render() {
-    //const { history, page } = this.props;
     const { list } = this.props;
     const { search } = this.props.Actions;
     return <div>
@@ -30,7 +26,6 @@ class App extends Component {
 }
 function mapStateToProps(state) {
   return {
-    history: state.history,
     list: state.list
   }
 }
